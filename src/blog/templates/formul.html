@@ -1,0 +1,27 @@
+{% extends 'article01.html' %}
+<head>
+	<title>{% block title %}mon premier formulaire sur les abrres{% endblock %}</title>
+</head>
+{% block content %}
+		test
+		<form action="" method="POST">
+			{% csrf_token %}
+
+			{{form.as_p}}
+			<input type="submit" name="" value="envoyer">
+		</form>
+
+		<form {% if form.is_multipart %}enctype="multipart/form-data"{% endif %} action="" method="post" class="uniForm">{% csrf_token %}
+			<fieldset>
+				<ul>
+					{{ form.as_ul }}
+					<li>
+						<div class="ctrlHolder buttonHolder">
+							<button type="submit" class="primaryAction" name="submit_changes">Submit changes</button>
+						</div>
+					</li>
+				</ul>
+			</fieldset>
+		</form>
+	
+{% endblock %}

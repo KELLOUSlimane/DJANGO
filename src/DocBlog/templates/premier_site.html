@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title> slimane site </title> <!-- Titre de la page -->
+		<meta charset="utf-8"> <!-- utf-8 pour les caractaire francais -->
+		<style>
+			body{
+				background-color : rgba(81, 109, 62, 0.137);
+			}
+		</style>
+	</head>
+
+	<body>
+		<h1> Bonjour Slimane  </h1>  <!-- un titre de niveau 1-->
+		<a href="{% url 'article' num='01' %}"  > <button type="button" class="btn btn-secondary"> Article 01 </button>  </a> </br>
+		<a href="{% url 'article' num='02' %}"  > <button type="button" class="btn btn-secondary"> Article 02 </button>  </a> </br>
+		<a href="{% url 'article' num='03' %}"  > <button type="button" class="btn btn-secondary"> Article 03 </button>  </a> </br>
+		<p>  mon premier <hr> paragraphe </p>  <!-- un paragraphe  -->
+		<h2> aujourd'hui nous somme le {{date|date:"d F Y H:i:s"}} </h2>  <!-- un titre de niveau 6 le dernier-->
+		<p>  paragraphe <br> paragraphe </p>  <!-- un paragraphe  -->
+		<pre>
+		smdkjfdflkqdùf
+			JJHL
+				DLJL
+		</pre>
+		<ol>
+			<li> kdjf
+			<li>zkfj
+			<li> lzefh
+			<li>zekfj
+		</ol>
+
+	</body>
+</html>
